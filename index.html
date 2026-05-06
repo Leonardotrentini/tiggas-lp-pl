@@ -20,6 +20,7 @@ header{background:#1a1a1a;padding:max(12px,env(safe-area-inset-top)) 0 16px;padd
 .hero h1{font-size:clamp(1.5rem,6vw,3.5rem);font-weight:900;margin-bottom:16px;line-height:1.15;letter-spacing:-.03em;text-wrap:balance}
 .hero p{font-size:clamp(.95rem,3.8vw,1.5rem);margin-bottom:32px;color:#d0d0d0;font-weight:300;line-height:1.55;text-wrap:pretty}
 .hero-highlight{background:#fff;color:#1a1a1a;padding:6px 14px;border-radius:4px;font-weight:800;white-space:nowrap}
+.hero-gap{display:none;height:0;width:0;overflow:hidden}
 .cta-primary{display:inline-block;background:#fff;color:#1a1a1a;padding:16px 36px;min-height:48px;font-size:clamp(.8rem,3.2vw,1rem);font-weight:800;text-decoration:none;border-radius:50px;touch-action:manipulation;-webkit-tap-highlight-color:transparent;letter-spacing:.06em;box-shadow:0 8px 24px rgba(255,255,255,.25)}
 .cta-primary:active{transform:scale(.98)}
 .container{max-width:1200px;margin:0 auto;padding:0 20px;padding-left:max(20px,env(safe-area-inset-left));padding-right:max(20px,env(safe-area-inset-right))}
@@ -79,11 +80,38 @@ footer{background:#2a2a2a;color:#fff;padding:48px 20px;padding-bottom:max(48px,e
 @media (prefers-reduced-motion:reduce){
 *,::before,::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
 }
+@media (max-width:768px){
+.hero{
+min-height:88vh;
+min-height:88dvh;
+display:flex;
+align-items:center;
+justify-content:center;
+padding:clamp(52px,11vw,72px) max(18px,env(safe-area-inset-left)) clamp(56px,15vw,96px) max(18px,env(safe-area-inset-right));
+contain-intrinsic-size:auto 580px;
+}
+.hero-content{width:100%}
+.hero h1{margin-bottom:clamp(20px,5.5vw,28px)}
+.hero p{
+font-size:clamp(1rem,4.2vw,1.22rem);
+line-height:1.72;
+letter-spacing:.01em;
+margin-bottom:clamp(36px,11vw,52px);
+padding:0 clamp(6px,3vw,16px);
+max-width:min(26.5rem,calc(100% - 8px));
+margin-left:auto;
+margin-right:auto;
+}
+.hero-gap{display:block;height:.7rem;width:auto;overflow:visible}
+.hero-highlight{padding:8px 15px}
+}
 @media (min-width:769px){
 .header-content{padding:0 20px}
-.hero{padding:100px 20px}
-.hero h1{font-size:56px;letter-spacing:-2px}
-.hero p{font-size:24px;margin-bottom:48px}
+.hero{min-height:0;display:block;padding:100px 20px}
+.hero-content{width:auto}
+.hero h1{font-size:56px;letter-spacing:-2px;margin-bottom:16px}
+.hero p{font-size:24px;margin-bottom:48px;padding:0;max-width:none}
+.hero-gap{display:none;height:0}
 .section-title{font-size:48px;margin-bottom:60px}
 section{padding:100px 20px}
 .como-funciona{padding:100px 20px}
@@ -117,7 +145,7 @@ footer{padding:60px 20px}
 </head>
 <body>
 <header><div class="header-content"><div class="logo">tiggas<sup>®</sup></div><a class="header-cta" target="_blank" rel="noopener noreferrer" style="cursor:pointer">Solicitar Orçamento</a></div></header>
-<section class="hero"><div class="hero-content"><h1>Sua Marca, Nossa Fábrica</h1><p>Desenvolvimento, customização e produção têxtil sob medida.<br>Pedido mínimo <span class="hero-highlight">10 peças</span> com desconto progressivo.</p><a class="cta-primary" target="_blank" rel="noopener noreferrer" style="cursor:pointer">Falar com Vendedor</a></div></section>
+<section class="hero"><div class="hero-content"><h1>Sua Marca, Nossa Fábrica</h1><p>Desenvolvimento, customização e produção têxtil sob medida.<br><span class="hero-gap" aria-hidden="true"></span>Pedido mínimo <span class="hero-highlight">10 peças</span> com desconto progressivo.</p><a class="cta-primary" target="_blank" rel="noopener noreferrer" style="cursor:pointer">Falar com Vendedor</a></div></section>
 <section class="como-funciona">
 <div class="container">
 <h2 class="section-title">3 Passos Para Sua Marca Existir</h2>
