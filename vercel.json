@@ -8,6 +8,15 @@
   ],
   "headers": [
     {
+      "source": "/api/next-wa",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-store, no-cache, must-revalidate"
+        }
+      ]
+    },
+    {
       "source": "/tiggas-pl_files/:path*",
       "headers": [
         {
