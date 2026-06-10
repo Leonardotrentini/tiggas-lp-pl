@@ -144,8 +144,8 @@ footer{padding:60px 20px}
 </style>
 </head>
 <body>
-<header><div class="header-content"><div class="logo">tiggas<sup>®</sup></div><a class="header-cta" target="_blank" rel="noopener noreferrer" style="cursor:pointer">Solicitar Orçamento</a></div></header>
-<section class="hero"><div class="hero-content"><h1>Sua Marca, Nossa Fábrica</h1><p>Desenvolvimento, customização e produção têxtil sob medida.<br><span class="hero-gap" aria-hidden="true"></span>Pedido mínimo <span class="hero-highlight">10 peças</span> com desconto progressivo.</p><a class="cta-primary" target="_blank" rel="noopener noreferrer" style="cursor:pointer">Falar com Vendedor</a></div></section>
+<header><div class="header-content"><div class="logo">tiggas<sup>®</sup></div><a class="header-cta" href="https://wa.me/5547999989815?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20gostaria%20de%20conhecer%20a%20Tiggas!" target="_blank" rel="noopener noreferrer">Solicitar Orçamento</a></div></header>
+<section class="hero"><div class="hero-content"><h1>Sua Marca, Nossa Fábrica</h1><p>Desenvolvimento, customização e produção têxtil sob medida.<br><span class="hero-gap" aria-hidden="true"></span>Pedido mínimo <span class="hero-highlight">10 peças</span> com desconto progressivo.</p><a class="cta-primary" href="https://wa.me/5547999989815?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20gostaria%20de%20conhecer%20a%20Tiggas!" target="_blank" rel="noopener noreferrer">Falar com Vendedor</a></div></section>
 <section class="como-funciona">
 <div class="container">
 <h2 class="section-title">3 Passos Para Sua Marca Existir</h2>
@@ -230,16 +230,12 @@ footer{padding:60px 20px}
 </div>
 </div>
 </section>
-<section class="cta-section" id="contato"><div class="container"><h2>Pronto Para Criar Sua Linha?</h2><p>Fale com nosso time e receba catálogo completo + tabela de preços</p><a class="cta-primary" target="_blank" rel="noopener noreferrer" style="cursor:pointer">Falar com Vendedor</a></div></section>
+<section class="cta-section" id="contato"><div class="container"><h2>Pronto Para Criar Sua Linha?</h2><p>Fale com nosso time e receba catálogo completo + tabela de preços</p><a class="cta-primary" href="https://wa.me/5547999989815?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20gostaria%20de%20conhecer%20a%20Tiggas!" target="_blank" rel="noopener noreferrer">Falar com Vendedor</a></div></section>
 <footer><div class="footer-content"><div class="footer-contact"><span style="color:#fff;font-weight:600;font-size:18px">Tiggas Company</span></div><div class="footer-copyright">© 2026 Tiggas Company. Todos os direitos reservados.</div></div></footer>
-<!-- WhatsApp: rodízio global via /api/next-wa (contador Redis/Vercel KV). Ordem: clique 1 → 5547997609773, clique 2 → 5547996693314, alterna para todos os visitantes. -->
+<!-- LP02: WhatsApp fixo 5547999989815 (sem rodízio) -->
 <script>
 document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();var t=document.querySelector(a.getAttribute('href'));if(t)t.scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion:reduce)').matches?'auto':'smooth'})},{passive:false})});
-var WA_FALLBACK=['https://wa.me/5547997609773?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20gostaria%20de%20comprar%20no%20atacado!','https://wa.me/5547996693314?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20gostaria%20de%20comprar%20no%20atacado!'];
-var waBusy=false;
-function openWA(url){if(typeof fbq!=='undefined')fbq('track','Contact');window.open(url,'_blank','noopener,noreferrer')}
-function fetchNextWA(){return fetch('/api/next-wa',{method:'GET',cache:'no-store',headers:{'Cache-Control':'no-cache','Pragma':'no-cache'}}).then(function(r){if(!r.ok)throw new Error('api');return r.json()}).then(function(d){if(!d||!d.url)throw new Error('empty');return d.url})}
-document.addEventListener('DOMContentLoaded',function(){document.querySelectorAll('.header-cta,.cta-primary').forEach(function(link){link.addEventListener('click',function(e){e.preventDefault();if(waBusy)return;waBusy=true;fetchNextWA().catch(function(){return WA_FALLBACK[Math.floor(Math.random()*WA_FALLBACK.length)]}).then(function(url){openWA(url)}).finally(function(){waBusy=false})},{passive:false})})});
+document.addEventListener('DOMContentLoaded',function(){document.querySelectorAll('a[href^="https://wa.me/"]').forEach(function(link){link.addEventListener('click',function(){if(typeof fbq!=='undefined')fbq('track','Contact')},{passive:true})})});
 window.addEventListener('load',function(){
 !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
 fbq('init','1739541223745806');
