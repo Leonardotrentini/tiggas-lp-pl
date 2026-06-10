@@ -4,6 +4,11 @@
       "source": "/tiggas-pl.html",
       "destination": "/",
       "permanent": true
+    },
+    {
+      "source": "/lp02",
+      "destination": "/lp02/",
+      "permanent": false
     }
   ],
   "headers": [
