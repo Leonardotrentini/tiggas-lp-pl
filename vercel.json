@@ -9,11 +9,30 @@
       "source": "/lp02",
       "destination": "/lp02/",
       "permanent": false
+    },
+    {
+      "source": "/moletons",
+      "destination": "/moletons/",
+      "permanent": false
+    },
+    {
+      "source": "/lp03",
+      "destination": "/moletons/",
+      "permanent": false
     }
   ],
   "headers": [
     {
       "source": "/api/next-wa",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-store, no-cache, must-revalidate"
+        }
+      ]
+    },
+    {
+      "source": "/api/next-wa-moletons",
       "headers": [
         {
           "key": "Cache-Control",
