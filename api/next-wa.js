@@ -1,7 +1,5 @@
 const WA_LINKS = [
   'https://wa.me/5547997609773?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20gostaria%20de%20comprar%20no%20atacado!',
-  'https://wa.me/5547996693314?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20gostaria%20de%20comprar%20no%20atacado!',
-  'https://wa.me/5547999989815?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20gostaria%20de%20comprar%20no%20atacado!',
 ];
 
 const COUNTER_KEY = 'tiggas_wa_counter';
